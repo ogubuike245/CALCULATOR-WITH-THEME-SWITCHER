@@ -24,7 +24,7 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
 Users should be able to:
 
 - See the size of the elements adjust based on their device's screen size
-- Perform mathmatical operations like addition, subtraction, multiplication, and division
+- Perform mathematical operations like addition, subtraction, multiplication, and division
 - Adjust the color theme based on their preference
 - **Bonus**: Have their initial theme preference checked using `prefers-color-scheme` and have any additional changes saved in the browser
 
@@ -42,8 +42,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/ogubuike245/CALCULATOR-WITH-THEME-SWITCHER.git]
+- Live Site URL: [https://calculatorwiththemeswitcher.netlify.app]
 
 ## My process
 
@@ -64,19 +64,25 @@ Use this section to recap over some of your major learnings while working throug
 To see how you can add code snippets, see below:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+
 ```
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
-}
+
 ```
 
 ```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
+(function () {
+  let Theme = localStorage.getItem("theme");
+  if (Theme === null) return setTheme("theme-one") && (slider.value = 1);
+  setTheme(Theme);
+
+  if (Theme === "theme-one") return (slider.value = 1);
+
+  if (Theme === "theme-two") return (slider.value = 2);
+
+  if (Theme === "theme-three") return (slider.value = 3);
+})();
 ```
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
@@ -89,18 +95,13 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 **Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+viewing your solution or for yourself when you look back on this project in the future.\*\*
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [ogubuike emejuru](https://calculatorwiththemeswitcher.netlify.app)
+- Frontend Mentor - [@ogubuike245](https://www.frontendmentor.io/profile/ogubuike245)
+- Twitter - [@spinkq](https://www.twitter.com/spinkq)
 
 **Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
