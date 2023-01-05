@@ -11,8 +11,7 @@ function setTheme(themeName) {
 // SET THEME ON RELOAD FROM LOCAL STORAGE
 (function () {
   let Theme = localStorage.getItem("theme");
-   if (Theme === "") return setTheme("theme-one");
-
+  if (Theme === null) return setTheme("theme-one") && (slider.value = 1);
   setTheme(Theme);
 
   if (Theme === "theme-one") return (slider.value = 1);
