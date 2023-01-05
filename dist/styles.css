@@ -1,0 +1,260 @@
+@font-face {
+  font-family: LeagueSpartan_Black;
+  src: url("../../assets/fonts/LeagueSpartan-Black.ttf");
+}
+@font-face {
+  font-family: LeagueSpartan_Bold;
+  src: url("../../assets/fonts/LeagueSpartan-Bold.ttf");
+}
+@font-face {
+  font-family: LeagueSpartan_ExtraBold;
+  src: url("../../assets/fonts/LeagueSpartan-ExtraBold.ttf");
+}
+@font-face {
+  font-family: LeagueSpartan_Regular;
+  src: url("../../assets/fonts/LeagueSpartan-Regular.ttf");
+}
+@font-face {
+  font-family: LeagueSpartan_ExtraLight;
+  src: url("../../assets/fonts/LeagueSpartan-ExtraLight.ttf");
+}
+@font-face {
+  font-family: LeagueSpartan_Light;
+  src: url("../../assets/fonts/LeagueSpartan-Light.ttf");
+}
+@font-face {
+  font-family: LeagueSpartan_Thin;
+  src: url("../../assets/fonts/LeagueSpartan-Thin.ttf");
+}
+@font-face {
+  font-family: LeagueSpartan_Medium;
+  src: url("../../assets/fonts/LeagueSpartan-Medium.ttf");
+}
+:root {
+  --LeagueSpartan_Medium: LeagueSpartan_Medium;
+  --LeagueSpartan_Bold: LeagueSpartan_Bold;
+  --LeagueSpartan_ExtraBold: LeagueSpartan_ExtraBold;
+  --LeagueSpartan_Regular: LeagueSpartan_Regular;
+  --LeagueSpartan_Thin: LeagueSpartan_Thin;
+  --LeagueSpartan_Light: LeagueSpartan_Light;
+  --LeagueSpartan_ExtraLight: LeagueSpartan_ExtraLight;
+  --LeagueSpartan_Medium: LeagueSpartan_Medium;
+}
+
+body {
+  background: var(--mainBackground);
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+section {
+  height: 600px;
+  width: 500px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 100px 1fr;
+  gap: 1rem;
+}
+section article {
+  border-radius: 10px;
+}
+section .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  color: var(--calc);
+  font-family: var(--LeagueSpartan_ExtraBold);
+  position: relative;
+}
+section .heading article {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 15px;
+  right: 2px;
+  width: 55px;
+  gap: 10px;
+}
+section .heading article p {
+  letter-spacing: 5px;
+  font-size: 11px;
+  font-family: var(--LeagueSpartan_Regular);
+  cursor: pointer;
+  color: var(--calc);
+}
+section .heading .left {
+  width: 100px;
+}
+section .heading .left h1 {
+  font-size: 20px;
+}
+section .heading .right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+}
+section .heading .right .slider__area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+}
+section .heading .right .slider__area input[type=range] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  background: var(--toggleBackground);
+  cursor: pointer;
+  height: 1rem;
+  width: 3.5rem;
+  border-radius: 20px;
+  padding: 0.06rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem;
+}
+section .heading .right .slider__area input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* OVERRIDE DEFAULT LOOK */
+  appearance: none;
+  border-radius: 20px;
+  background: var(--sliderButton);
+  height: 0.8rem;
+  width: 0.8rem;
+}
+section .display {
+  background: var(--screenBackground);
+  color: var(--White);
+  display: flex;
+  padding: 10px;
+}
+section .display input {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  background: var(--screenBackground);
+  text-align: right;
+  padding-right: 25px;
+  color: var(--calc);
+  font-family: var(--LeagueSpartan_ExtraBold);
+  font-size: 45px;
+  outline: none;
+  border: none;
+}
+section .digits {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 50px);
+  gap: 1rem;
+  padding: 15px;
+  background: var(--toggleBackground);
+}
+section .digits button {
+  border-radius: 10px;
+  background: var(--digitsKeyBackground);
+  color: var(--digitsColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--LeagueSpartan_ExtraBold);
+  font-size: 25px;
+  box-shadow: 1px 3px 1px var(--digitsKeyBackgroundShadow);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  transition: 0.4s;
+}
+section .digits button:hover {
+  box-shadow: 3px 5px 1px var(--digitsKeyBackgroundShadow);
+  transition: 0.3s;
+}
+section .digits .del,
+section .digits .reset {
+  color: var(--White);
+  background: var(--resetKeyBackground);
+  box-shadow: 1px 3px 1px var(--resetKeyBackgroundShadow);
+  transition: 0.4s;
+}
+section .digits .del:hover,
+section .digits .reset:hover {
+  box-shadow: 3px 5px 1px var(--resetKeyBackgroundShadow);
+  transition: 0.3s ease-in-out;
+}
+section .digits .reset {
+  grid-area: 5/1/6/3;
+  transition: 0.4s;
+}
+section .digits .equals {
+  grid-area: 5/3/6/5;
+  background: var(--equalsKeyBackground);
+  color: var(--equalsText);
+  box-shadow: 1px 3px 1px var(--equalsKeyBackgroundShadow);
+}
+section .digits .equals:hover {
+  box-shadow: 3px 5px 1px var(--equalsKeyBackgroundShadow);
+  transition: 0.3s ease-in-out;
+}
+
+.theme-one {
+  --mainBackground: hsl(222, 26%, 31%);
+  --toggleBackground: hsl(223, 31%, 20%);
+  --screenBackground: hsl(224, 36%, 15%);
+  --resetKeyBackground: hsl(225, 21%, 49%);
+  --resetKeyBackgroundShadow: hsl(224, 28%, 35%);
+  --equalsKeyBackground: hsl(6, 63%, 50%);
+  --equalsKeyBackgroundShadow: hsl(6, 70%, 34%);
+  --digitsKeyBackground: hsl(30, 25%, 89%);
+  --digitsKeyBackgroundShadow: hsl(28, 16%, 65%);
+  --sliderButton: hsl(6, 70%, 34%);
+  --digitsColor: hsl(221, 14%, 31%);
+  --White: hsl(0, 0%, 100%);
+  --calc: hsl(0, 0%, 100%);
+  --equalsText: hsl(0, 0%, 100%);
+}
+
+.theme-two {
+  --mainBackground: hsl(0, 0%, 90%);
+  --toggleBackground: hsl(0, 5%, 81%);
+  --screenBackground: hsl(0, 0%, 93%);
+  --resetKeyBackground: hsl(185, 42%, 37%);
+  --resetKeyBackgroundShadow: hsl(185, 58%, 25%);
+  --equalsKeyBackground: hsl(25, 98%, 40%);
+  --equalsKeyBackgroundShadow: hsl(25, 99%, 27%);
+  --digitsKeyBackground: hsl(45, 7%, 89%);
+  --digitsKeyBackgroundShadow: hsl(35, 11%, 61%);
+  --sliderButton: hsl(25, 98%, 40%);
+  --digitsColor: hsl(60, 10%, 19%);
+  --White: hsl(0, 0%, 100%);
+  --calc: hsl(0, 0%, 2%);
+  --equalsText: hsl(0, 0%, 100%);
+}
+
+.theme-three {
+  --mainBackground: hsl(268, 75%, 9%);
+  --toggleBackground: hsl(268, 71%, 12%);
+  --screenBackground: hsl(268, 71%, 12%);
+  --resetKeyBackground: hsl(281, 89%, 26%);
+  --resetKeyBackgroundShadow: hsl(285, 91%, 52%);
+  --equalsKeyBackground: hsl(176, 100%, 44%);
+  --equalsKeyBackgroundShadow: hsl(177, 92%, 70%);
+  --digitsKeyBackground: hsl(268, 47%, 21%);
+  --digitsKeyBackgroundShadow: hsl(290, 70%, 36%);
+  --sliderButton: hsl(176, 100%, 44%);
+  --digitsColor: hsl(52, 100%, 62%);
+  --White: hsl(0, 0%, 100%);
+  --calc: hsl(52, 100%, 62%);
+  --equalsText: hsl(0, 0%, 2%);
+}/*# sourceMappingURL=styles.css.map */

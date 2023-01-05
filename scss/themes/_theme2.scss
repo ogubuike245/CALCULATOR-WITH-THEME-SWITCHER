@@ -1,0 +1,27 @@
+.theme-two {
+  // BACKGROUNDS
+
+  --mainBackground: hsl(0, 0%, 90%);
+  --toggleBackground: hsl(0, 5%, 81%);
+  --screenBackground: hsl(0, 0%, 93%);
+
+  // KEYS
+
+  --resetKeyBackground: hsl(185, 42%, 37%);
+  --resetKeyBackgroundShadow: hsl(185, 58%, 25%);
+
+  --equalsKeyBackground: hsl(25, 98%, 40%);
+  --equalsKeyBackgroundShadow: hsl(25, 99%, 27%);
+
+  --digitsKeyBackground: hsl(45, 7%, 89%);
+  --digitsKeyBackgroundShadow: hsl(35, 11%, 61%);
+
+  --sliderButton: hsl(25, 98%, 40%);
+
+  // TEXT
+
+  --digitsColor: hsl(60, 10%, 19%);
+  --White: hsl(0, 0%, 100%);
+  --calc: hsl(0, 0%, 2%);
+  --equalsText: hsl(0, 0%, 100%);
+}

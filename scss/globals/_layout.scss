@@ -1,0 +1,181 @@
+body {
+  background: var(--mainBackground);
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+section {
+  height: 600px;
+  width: 500px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 100px 1fr;
+  gap: 1rem;
+
+  article {
+    border-radius: 10px;
+  }
+
+  .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    color: var(--calc);
+    font-family: var(--LeagueSpartan_ExtraBold);
+    position: relative;
+
+    article {
+      display: flex;
+      justify-content: space-around;
+      position: absolute;
+      top: 15px;
+      right: 2px;
+      width: 55px;
+      gap: 10px;
+
+      p {
+        letter-spacing: 5px;
+        font-size: 11px;
+        font-family: var(--LeagueSpartan_Regular);
+        cursor: pointer;
+        color: var(--calc);
+      }
+    }
+
+    .left {
+      width: 100px;
+
+      h1 {
+        font-size: 20px;
+      }
+    }
+    .right {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 150px;
+
+      .slider__area {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 50px;
+
+        input[type="range"] {
+          -webkit-appearance: none;
+          appearance: none;
+          background: var(--toggleBackground);
+          cursor: pointer;
+          height: 1rem;
+          width: 3.5rem;
+          border-radius: 20px;
+          padding: 0.06rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0.2rem;
+
+          &::-webkit-slider-thumb {
+            -webkit-appearance: none; /* OVERRIDE DEFAULT LOOK */
+            appearance: none;
+            border-radius: 20px;
+            background: var(--sliderButton);
+            height: 0.8rem;
+            width: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  .display {
+    background: var(--screenBackground);
+    color: var(--White);
+    display: flex;
+    padding: 10px;
+
+    input {
+      height: 100%;
+      width: 100%;
+      border-radius: 10px;
+      background: var(--screenBackground);
+      text-align: right;
+      padding-right: 25px;
+      color: var(--calc);
+      font-family: var(--LeagueSpartan_ExtraBold);
+      font-size: 45px;
+      outline: none;
+      border: none;
+    }
+  }
+  .digits {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 50px);
+    gap: 1rem;
+    padding: 15px;
+    background: var(--toggleBackground);
+
+    button {
+      border-radius: 10px;
+      background: var(--digitsKeyBackground);
+      color: var(--digitsColor);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: var(--LeagueSpartan_ExtraBold);
+      font-size: 25px;
+      box-shadow: 1px 3px 1px var(--digitsKeyBackgroundShadow);
+      cursor: pointer;
+      outline: none;
+      border: none;
+      transition: 0.4s;
+      &:hover {
+        box-shadow: 3px 5px 1px var(--digitsKeyBackgroundShadow);
+        transition: 0.3s;
+      }
+    }
+
+    .del,
+    .reset {
+      color: var(--White);
+      background: var(--resetKeyBackground);
+      box-shadow: 1px 3px 1px var(--resetKeyBackgroundShadow);
+      transition: 0.4s;
+
+      &:hover {
+        box-shadow: 3px 5px 1px var(--resetKeyBackgroundShadow);
+        transition: 0.3s ease-in-out;
+      }
+    }
+
+    .reset {
+      grid-area: 5 / 1 / 6 / 3;
+      transition: 0.4s;
+    }
+
+    .equals {
+      grid-area: 5 / 3 / 6 / 5;
+      background: var(--equalsKeyBackground);
+      color: var(--equalsText);
+      box-shadow: 1px 3px 1px var(--equalsKeyBackgroundShadow);
+
+      &:hover {
+        box-shadow: 3px 5px 1px var(--equalsKeyBackgroundShadow);
+        transition: 0.3s ease-in-out;
+      }
+    }
+  }
+}

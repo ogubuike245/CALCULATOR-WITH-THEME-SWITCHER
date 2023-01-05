@@ -1,0 +1,27 @@
+.theme-three {
+  // FIXME: THEME ONE
+
+  // BACKGROUNDS
+
+  --mainBackground: hsl(268, 75%, 9%);
+  --toggleBackground: hsl(268, 71%, 12%);
+  --screenBackground: hsl(268, 71%, 12%);
+
+  // KEYS
+  --resetKeyBackground: hsl(281, 89%, 26%);
+  --resetKeyBackgroundShadow: hsl(285, 91%, 52%);
+
+  --equalsKeyBackground: hsl(176, 100%, 44%);
+  --equalsKeyBackgroundShadow: hsl(177, 92%, 70%);
+
+  --digitsKeyBackground: hsl(268, 47%, 21%);
+  --digitsKeyBackgroundShadow: hsl(290, 70%, 36%);
+
+  --sliderButton: hsl(176, 100%, 44%);
+
+  // TEXT
+  --digitsColor: hsl(52, 100%, 62%);
+  --White: hsl(0, 0%, 100%);
+  --calc: hsl(52, 100%, 62%);
+  --equalsText: hsl(0, 0%, 2%);
+}
