@@ -53,7 +53,6 @@ body {
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
   margin: 0;
 }
 
@@ -92,6 +91,15 @@ section .heading article p {
   font-family: var(--LeagueSpartan_Regular);
   cursor: pointer;
   color: var(--calc);
+}
+section .heading .info {
+  top: -20px;
+  width: 550px;
+  height: 50px;
+  right: -2px;
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
 }
 section .heading .left {
   width: 100px;

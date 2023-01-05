@@ -10,7 +10,7 @@ body {
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+  // -webkit-appearance: none;
   margin: 0;
 }
 
@@ -53,6 +53,16 @@ section {
       }
     }
 
+    .info {
+      top: -20px;
+      width: 550px;
+      height: 50px;
+      right: -2px;
+      text-align: center;
+      // border: 2px solid red;
+      display: flex;
+      justify-content: flex-end;
+    }
     .left {
       width: 100px;
 

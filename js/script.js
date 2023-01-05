@@ -7,18 +7,24 @@ function setTheme(themeName) {
   localStorage.setItem("theme", themeName);
   document.documentElement.className = themeName;
 }
+// FUNCTION TO SET A GIVEN THEME
+function setRangeSlider(sliderValue) {
+  localStorage.setItem("slider", sliderValue);
+  slider.value = sliderValue;
+}
 
 // SET THEME ON RELOAD FROM LOCAL STORAGE
 (function () {
-  let Theme = localStorage.getItem("theme");
-  if (Theme === null) return setTheme("theme-one") && (slider.value = 1);
+  const Theme = localStorage.getItem("theme");
+  const Range = localStorage.getItem("slider");
   setTheme(Theme);
+  setRangeSlider(Range);
+  // console.log(slider.value);
 
-  if (Theme === "theme-one") return (slider.value = 1);
-
-  if (Theme === "theme-two") return (slider.value = 2);
-
-  if (Theme === "theme-three") return (slider.value = 3);
+  if (Theme === "theme-one") return setRangeSlider("1");
+  if (Theme === "theme-two") return setRangeSlider("2");
+  if (Theme === "theme-three") return setRangeSlider("3");
+  // console.log(slider.value);
 })();
 
 // THEME SELECTION BY CLICKING ON THUMB OF INPUT RANGE TYPE
@@ -27,12 +33,15 @@ function SelectTheme() {
   switch (theme) {
     case "1":
       setTheme("theme-one");
+      setRangeSlider("1");
       break;
     case "2":
       setTheme("theme-two");
+      setRangeSlider("2");
       break;
     case "3":
       setTheme("theme-three");
+      setRangeSlider("3");
       break;
   }
 }
